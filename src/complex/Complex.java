@@ -35,4 +35,9 @@ public class Complex implements Addable, Multipliable, Dividable {
         double dividedImaginary = (this.imaginary * cmplx2.real - this.real * cmplx2.imaginary) / (cmplx2.real * cmplx2.real + cmplx2.imaginary * cmplx2.imaginary);
         return new Complex(dividedReal, dividedImaginary);
     }
+
+    @Override
+    public String toString() {
+        return (this.real + " + " + this.imaginary + "*i");
+    }
 }
