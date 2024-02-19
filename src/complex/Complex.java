@@ -35,15 +35,4 @@ public class Complex implements Addable, Multipliable, Dividable {
         double dividedImaginary = (this.imaginary * cmplx2.real - this.real * cmplx2.imaginary) / (cmplx2.real * cmplx2.real + cmplx2.imaginary * cmplx2.imaginary);
         return new Complex(dividedReal, dividedImaginary);
     }
-
-    @Override
-    public String toString () {
-        if (real == 0.0) {
-            return String.format("%d*i", imaginary);
-        } else if (imaginary == 0.0) {
-            return String.format("%d", real);
-        } else if (imaginary < 0.0) {
-            return String.format("%d %d*i", real, imaginary);
-        } else { return String.format("%d + %d*i", real, imaginary); }
-    }
 }
